@@ -1,8 +1,6 @@
 # README
 
-This is a practise repo for learning how to run nginx docker for serving:
-* static content
-* reverse proxy of other services
+In this example 1, we implemented a nginx container, which has index.html changed to our own customized index 
 
 How to run nginx docker container:
 
