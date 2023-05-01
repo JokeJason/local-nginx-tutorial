@@ -11,4 +11,4 @@ docker-compose build
 docker-compose up
 ```
 
-* As we use docker-compose.yaml, it's easy to build image and spawn up container
+* As we use docker-compose.yaml, it's easy to build image and spawn up container in this way
