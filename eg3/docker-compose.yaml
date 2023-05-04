@@ -1,16 +1,16 @@
 version: '3.8'
 
 services:
-  # proxy:
-  #   container_name: proxy
-  #   build:
-  #     context: ./proxy
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - frontend
-  #     - backend
+  proxy:
+    container_name: proxy
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
 
   frontend:
     container_name: frontend

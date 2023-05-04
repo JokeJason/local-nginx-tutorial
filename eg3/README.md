@@ -35,3 +35,23 @@ Steps:
    1. Enter frontend container: `docker exec -it frontend /bin/sh`
    2. Make a request to backend: `curl http://backend:5000`
    3. Get response `{"version": "1.0.0"}`
+
+# Proxy using nginx
+
+In this section, we test we can reach both frontend and backend from proxy container or computer itself
+
+Steps:
+1. Uncomment all container in `docker-compose.yaml`
+2. Build container and initiate them via `docker compose up`
+3. These container are not in `mynetwork`
+4. Enter proxy container via `docker exec -it proxy /bin/sh`
+5. From the proxy container, try to reach other containers
+   1. Frontend
+      1. `curl http://frontend`
+      2. `curl http://localhost` to visit port 80
+   2. Backend
+      1. `curl http://backend:5000`
+      2. `curl http://localhost/api`
+6. Exit the container; In normal terminal, we can still reach frontend and backend
+   1. `curl http://localhost` to visit frontend
+   2. `curl http://localhost/api` to visit backend
