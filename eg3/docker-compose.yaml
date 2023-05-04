@@ -12,16 +12,18 @@ services:
   #     - frontend
   #     - backend
 
-  # frontend:
-  #   container_name: frontend
-  #   build: 
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-
-  backend:
-    container_name: backend
-    build:
-      context: ./backend
+  frontend:
+    container_name: frontend
+    build: 
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "5000:5000" # Uncomment this line if you want to run the backend container only
+      - "80:80" # Uncomment this line if you want to run the frontend container only
+
+  # backend:
+  #   container_name: backend
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "5000:5000" # Uncomment this line if you want to run the backend container only

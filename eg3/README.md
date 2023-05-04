@@ -5,7 +5,13 @@
 ## Backend only
 
 How to test it:
-
 1. Comment all other containers
 2. Run `docker compose build` & `docker compose up`
 3. Test by `curl localhost:5000`, should return `{"version":"1.0.0"}`
+
+## Frontend only
+
+How to test it:
+1. Comment all other containers
+2. Run `docker compose build` & `docker compose up`
+3. Test by `curl localhost`, should return a html file (as `/eg3/frontend/index.html`)
