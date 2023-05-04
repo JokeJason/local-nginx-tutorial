@@ -22,7 +22,9 @@ In this section, we test frontend container can cross-communicate with backend c
 
 Steps:
 1. Comment out proxy container
-2. frontend has port 80 exposed; backend has port 5000 exposed;
+2. Remove exposed of both containers, as we they don't need expose their ports to outside environment. We just want to test their cross-communication in the same docker network
+   1. port 80 for frontend; 
+   2. port 5000 for backend;
 3. Run `docker compose build` & `docker compose up`
 4. Create a network: `docker network create mynetwork`
 5. Add containers into network
