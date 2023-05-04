@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # proxy:
+  #   container_name: proxy
+  #   build:
+  #     context: ./proxy
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "80:80"
+  #   depends_on:
+  #     - frontend
+  #     - backend
+
+  # frontend:
+  #   container_name: frontend
+  #   build: 
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" # Uncomment this line if you want to run the backend container only
